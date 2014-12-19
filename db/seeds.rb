@@ -34,8 +34,8 @@ User.create!(first_name:"Guy", email:"guy@ga.com", password:"password", role:"in
 
 
 
-Campus.create!(name:"Second Home", description:"A lovely place filled with grumpy people", location:"Hanbury st", image:"")
-Campus.create!(name:"Back Hill", description:"The old place", location:"Back hill", image:"")
+Campus.create!(name:"Second Home", description:"A lovely place filled with grumpy people", location:"Hanbury st")
+Campus.create!(name:"Back Hill", description:"The old place", location:"Back hill")
 
 Course.create!(name:"WDI", description:"A hard course")
 Course.create!(name:"UXDI", description:"An easy course")
