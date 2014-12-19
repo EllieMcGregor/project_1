@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @course.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @course.description %>
+</p>
+
+<p>
+  <strong>Start date</strong>
+  <%= @course.start_date%>
+</p>
+
+<p>
+  <strong>End date</strong>
+  <%= @course.end_date %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @course.price %>
+</p>
+  <%#= @course.enrolls.each do |user_id| %>
+
+  <%#= @course.enrolls.users_id :first_name %>
+<p><strong>Students on this course:</strong>
+<% @course.enrolls.each do |enroll| %>
+<li><%= link_to enroll.user.first_name, enroll %></li>
+<% end %>
+</p>
+
+<p><strong>Instructors on this course:</strong>
+<% @course.instructs.each do |user_id| %>
+<li><%= link_to User.find(user_id.user_id).first_name, user_id %></li>
+<% end %>
+</p>
+
+<li>
+  <%= link_to 'Enroll an Instructor', instructs_path if can? :create, Instruct %>
+</li>
+
+<%= link_to 'Enroll a student', new_enroll_path(@enroll) if can? :create, Enroll%>
+<%= link_to 'Edit', edit_course_path(@course) %> |
+<%= link_to 'Back', courses_path %>

@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @enroll.course.try :name %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @enroll.user.try :first_name %>
+</p>
+
+
+<p>
+  <strong>Payment status:</strong>
+  <%= @enroll.payment_status %>
+</p>
+
+<%= link_to 'New', new_enroll_path(@enroll) %>
+
+<%= link_to 'Edit', edit_enroll_path(@enroll) %> |
+<%= link_to 'Back', enrolls_path %>

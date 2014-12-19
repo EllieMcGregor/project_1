@@ -1,0 +1,29 @@
+<h1>Listing instructs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Course</th>
+      <th>User</th>
+      <th>Level</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @instructs.each do |instruct| %>
+      <tr>
+        <td><%= instruct.course.try :name %></td>
+        <td><%= instruct.user.try :first_name %></td>
+        <td><%= instruct.level %></td>
+        <td><%= link_to 'Show', instruct %></td>
+        <td><%= link_to 'Edit', edit_instruct_path(instruct) %></td>
+        <td><%= link_to 'Destroy', instruct, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Instruct', new_instruct_path %>

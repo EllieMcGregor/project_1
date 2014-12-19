@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @instruct.course.try :name %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @instruct.user.try :first_name %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @instruct.level %>
+</p>
+
+<%= link_to 'Edit', edit_instruct_path(@instruct) if can? :edit, Instruct %> |
+<%= link_to 'Back', instructs_path %>

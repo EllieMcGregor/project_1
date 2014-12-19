@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Classrooms </h1>
+<p>
+  <strong>Room name:</strong>
+  <%= @classroom.room_name %>
+</p>
+
+<p>
+  <strong>Capacity:</strong>
+  <%= @classroom.capacity %>
+</p>
+
+<p>
+  <strong>Campus:</strong>
+  <%= @classroom.campus.try :name %>
+</p>
+
+<%= link_to 'Book Room', new_booking_path(@booking) if can? :edit, Classroom %> |
+
+<%= link_to 'Edit', edit_classroom_path(@classroom) if can? :edit, Classroom %> |
+<%= link_to 'Back', classrooms_path %>

@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+
+<h1>Bookings</h1>
+
+<p>
+  <strong>Course:</strong>
+  <%= @booking.course.try :name %>
+</p>
+
+<p>
+  <strong>Classroom:</strong>
+  <%= @booking.classroom.try :room_name%>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @booking.date%>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @booking.created_at %>
+</p>
+
+
+
+
+
+
+<%= link_to 'Edit', edit_booking_path(@booking) %> |
+<%= link_to 'Back', bookings_path %>

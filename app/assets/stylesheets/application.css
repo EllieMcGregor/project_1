@@ -1,0 +1,131 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+
+ img {
+  float:left;
+}
+
+body {
+
+  background-size: cover;
+  text-align: center;
+  font-family: Garamond;
+
+}
+
+
+
+nav ul li { 
+
+  background:rgba(202, 202, 202,0.3);
+}
+
+
+form {
+  display:inline-block;
+}
+
+nav a {
+  color:#2C3539;
+  padding:20px;
+
+}
+
+
+
+section {
+  background:rgba(204, 204, 204,0.3);
+  width:800px;
+  margin:0 auto;
+  color:black;
+  font-size: 22px;
+}
+
+
+
+.main-content img {
+  width: 100px;
+  height: 100px;
+}
+#main-nav {
+  position:absolute;
+  top: 0;
+  right: 0;
+  display:inline;
+  font-size: 21px;
+
+}
+
+.logo {
+  position:absolute;
+  top: 0;
+  left: 0;
+
+}
+
+.logo h2 {
+  margin: 10px;
+  font-size: 25px;
+  font-family: 'Syncopate', sans-serif;
+  position:left;
+
+}
+
+.main-header {
+  height:60px;
+}
+
+h1 {
+  font-size: 32px;
+  font-family: 'Syncopate', sans-serif;
+}
+
+
+table {
+
+  font-size: 20px;
+  font-family: 'Mandali', sans-serif;
+
+}
+
+table thead {
+  padding: 15px 15px;
+}
+
+table td a {
+  font-size: 10px;
+  padding: 0;
+
+}
+
+
+table td{
+  padding: 15px 15px;
+  color:#303030;
+
+}
+
+
+
+
+
+
+
+
+

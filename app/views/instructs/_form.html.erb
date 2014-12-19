@@ -1,0 +1,38 @@
+<%= form_for(@instruct) do |f| %>
+  <% if @instruct.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@instruct.errors.count, "error") %> prohibited this instruct from being saved:</h2>
+
+      <ul>
+      <% @instruct.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :course_id %><br>
+    <%= f.collection_select :course_id, @courses, :id, :name %>
+
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.collection_select :user_id, @instructors, :id, :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :level %><br>
+    <%= f.select :level, [['TA'],['Lead Instructor']] %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
+
+
+
+
+
