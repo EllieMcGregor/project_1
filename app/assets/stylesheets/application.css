@@ -13,29 +13,23 @@
  *= require_tree .
  *= require_self
  */
- @import "bootstrap-sprockets";
- @import "bootstrap";
 
+/* @import "bootstrap-sprockets";
+ @import "bootstrap";*/
 
- img {
+img {
   float:left;
 }
 
 body {
-
   background-size: cover;
   text-align: center;
   font-family: Garamond;
-
 }
-
-
 
 nav ul li { 
-
   background:rgba(202, 202, 202,0.3);
 }
-
 
 form {
   display:inline-block;
@@ -44,10 +38,7 @@ form {
 nav a {
   color:#2C3539;
   padding:20px;
-
 }
-
-
 
 section {
   background:rgba(204, 204, 204,0.3);
@@ -57,26 +48,23 @@ section {
   font-size: 22px;
 }
 
-
-
 .main-content img {
   width: 100px;
   height: 100px;
 }
+
 #main-nav {
   position:absolute;
   top: 0;
   right: 0;
   display:inline;
   font-size: 21px;
-
 }
 
 .logo {
   position:absolute;
   top: 0;
   left: 0;
-
 }
 
 .logo h2 {
@@ -84,7 +72,6 @@ section {
   font-size: 25px;
   font-family: 'Syncopate', sans-serif;
   position:left;
-
 }
 
 .main-header {
@@ -96,12 +83,9 @@ h1 {
   font-family: 'Syncopate', sans-serif;
 }
 
-
 table {
-
   font-size: 20px;
   font-family: 'Mandali', sans-serif;
-
 }
 
 table thead {
@@ -111,21 +95,9 @@ table thead {
 table td a {
   font-size: 10px;
   padding: 0;
-
 }
-
 
 table td{
   padding: 15px 15px;
   color:#303030;
-
 }
-
-
-
-
-
-
-
-
-
