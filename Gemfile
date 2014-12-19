@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'carrierwave', '0.9.0'
-
 gem 'calendar_date_select', '~> 2.0.0'
+gem 'rails_12factor', group: :production
 
 gem 'rmagick'
 gem 'devise'
