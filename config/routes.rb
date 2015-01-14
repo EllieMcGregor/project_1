@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
 
-  get "/my_profile", to: "user#show", as: :my_profile
-
-  # get "/all_users", to: "users#index", as: :all_users
-
+  get "/my_profile", to: "user#show", as: :my_profile  
   root to: "campuses#index"
 
   resources :users, only: [:index]
@@ -14,6 +11,7 @@ Rails.application.routes.draw do
   resources :classrooms
   resources :campus
   resources :courses
-  devise_for :users
+  devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks" }
+
 
 end

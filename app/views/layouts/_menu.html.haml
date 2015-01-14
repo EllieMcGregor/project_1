@@ -35,6 +35,7 @@
         <% if current_user %>
         <%= menu_item current_user.email %>
       </li>
+
       <li role="presentation" class="active">
         <%= menu_item "Log out", destroy_user_session_path, method: :delete %>
         <% else %>
@@ -42,11 +43,8 @@
         </li>
         <li class='register'>
         <%= link_to "Register", new_user_registration_path %>
-        </li>
-        <li class='google'>
-        <%= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2) %>
-        </li>
         <% end %>
+      </li>
 
     </ul>
   </nav>
