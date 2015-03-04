@@ -9,6 +9,7 @@ puts "Deleting all existing data"
 User.delete_all
 Campus.delete_all
 Course.delete_all
+Classroom.delete_all
 
 puts "creating users"
 User.create!(first_name:"Ellie", email:"ellie@ga.com", password:"password", role:"admin")
