@@ -17,8 +17,8 @@
         <td><%= instruct.user.try :first_name %></td>
         <td><%= instruct.level %></td>
         <td><%= link_to 'Show', instruct %></td>
-        <td><%= link_to 'Edit', edit_instruct_path(instruct) %></td>
-        <td><%= link_to 'Destroy', instruct, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_instruct_path(instruct) if can? :edit, Instruct %></td>
+        <td><%= link_to 'Destroy', instruct, method: :delete, data: { confirm: 'Are you sure?' } if can? :destroy, Instruct %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Instruct', new_instruct_path %>
+<%= link_to 'New Instruct', new_instruct_path if can? :create, Instruct  %>
