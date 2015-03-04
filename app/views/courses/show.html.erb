@@ -44,5 +44,5 @@
 </li>
 
 <%= link_to 'Enroll a student', new_enroll_path(@enroll) if can? :create, Enroll%>
-<%= link_to 'Edit', edit_course_path(@course) %> |
+<%= link_to 'Edit', edit_course_path(@course) if can? :edit, Course %> |
 <%= link_to 'Back', courses_path %>
