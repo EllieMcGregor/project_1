@@ -29,13 +29,13 @@
   <%#= @course.enrolls.users_id :first_name %>
 <p><strong>Students on this course:</strong>
 <% @course.enrolls.each do |enroll| %>
-<li><%= link_to enroll.user.first_name, enroll %></li>
+<li><%= link_to enroll.user.try :first_name, enroll %></li>
 <% end %>
 </p>
 
 <p><strong>Instructors on this course:</strong>
 <% @course.instructs.each do |user_id| %>
-<li><%= link_to User.find(user_id.user_id).first_name, user_id %></li>
+<li><%= link_to User.find(user_id.try :user_id).first_name, user_id %></li>
 <% end %>
 </p>
 

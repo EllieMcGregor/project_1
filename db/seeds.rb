@@ -33,7 +33,7 @@ User.create!(first_name:"Johanna", email:"johanna@ga.com", password:"password", 
 User.create!(first_name:"Guy", email:"guy@ga.com", password:"password", role:"instructor")
 
 
-
+Campus.delete_all
 Campus.create!(name:"Second Home", description:"A lovely place filled with grumpy people", location:"Hanbury st")
 Campus.create!(name:"Back Hill", description:"The old place", location:"Back hill")
 
@@ -42,5 +42,6 @@ Course.create!(name:"UXDI", description:"An easy course")
 
 
 Classroom.create!(room_name:'classroom 1', capacity: 21, campus_id: 1)
+Classroom.create!(room_name:'classroom 2', capacity: 20, campus_id: 1)
 
 
