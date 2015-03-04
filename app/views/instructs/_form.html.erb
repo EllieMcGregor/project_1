@@ -13,12 +13,12 @@
 
   <div class="field">
     <%= f.label :course_id %><br>
-    <%= f.collection_select :course_id, @courses, :id, :name %>
+    <%= f.collection_select :course_id, Course.order(:name).uniq, :id, :name %>
 
   </div>
   <div class="field">
     <%= f.label :user_id %><br>
-    <%= f.collection_select :user_id, @instructors, :id, :first_name %>
+    <%= f.collection_select :user_id, User.order(:first_name).uniq, :id, :first_name %>
   </div>
   <div class="field">
     <%= f.label :level %><br>
@@ -29,6 +29,7 @@
     <%= f.submit %>
   </div>
 <% end %>
+
 
 
 
