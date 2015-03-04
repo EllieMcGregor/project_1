@@ -29,7 +29,7 @@
   <%#= @course.enrolls.users_id :first_name %>
 <p><strong>Students on this course:</strong>
 <% @course.enrolls.each do |enroll| %>
-<li><%= link_to enroll.user.try :first_name, enroll %></li>
+<li><%= link_to enroll.user.first_name, enroll %></li>
 <% end %>
 </p>
 
